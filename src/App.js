@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Link } from 'react-router-dom'
 import Test from './Test';
 import action from './action/counter'
 
@@ -37,6 +37,8 @@ class App extends Component {
             <button onClick={ () => this.props.handleDecClick2()}>DecClick!</button>
           </div>
           <h2>ココらへん react+router and css scope(css modules)の勉強</h2>
+          <div><Link to="/">Home</Link></div>
+          <div><Link to="/test">testリンク</Link></div>
           <Route exact path='/test' component={Test} />
         </div>
       </BrowserRouter>
